@@ -36,7 +36,8 @@ public class SearchController {
         ArrayList<Job> jobs;
 
         // touppercase???
-        if (searchTerm.equals("all") || searchTerm.isEmpty()) {
+//        if (searchTerm.equals("all") || searchTerm.isEmpty()) {
+        if (searchType.equals("all") && searchTerm.isEmpty()) {
             jobs = JobData.findAll();
             model.addAttribute("title", "All Jobs");
 //            model.addAttribute("columns", columnChoices);
